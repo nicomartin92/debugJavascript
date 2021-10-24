@@ -22,43 +22,69 @@
     </section>
 
     <section>
-      <h3>Node / React</h3>
+      <section>
+        <h3>Tests unitaires avec Jest</h3>
+      </section>
+      <section>
+        <h3>VS Code</h3>
+        <p>Prérequis :</p>
+        <p class="fragment">Jest</p>
+        <p class="fragment">
+          Jest Runner (VSCode extension)
+          <img style="margin: 0" src="img/img1.png" width="40px" heigt="40px" alt="">
+        </p>
+      </section>
+
+      <section>
+        <p>Le plugin permet de lancer et debugger indépendamment chaque test.</p>
+        <img style="margin: 0" src="img/img2.png" width="900px" alt="">
+      </section>
+
+      <section>
+        <h3>JetBrains</h3>
+        <div class="centered tenor-gif-embed" data-postid="21541617" data-share-method="host" data-aspect-ratio="0.859375"
+             data-width="50%"><a href="https://tenor.com/view/hack-khaby-lame-life-gif-21541617">Hack Khaby GIF</a>from
+          <a href="https://tenor.com/search/hack-gifs">Hack GIFs</a></div>
+      </section>
     </section>
 
-    <section>
-      <h3>VS Code</h3>
-    </section>
 
     <section>
-      <h3>2 moyens possibles</h3>
-      <p class="fragment">Créer un fichier launch.json</p>
-      <p class="fragment">Créer un Terminal en mode debug</p>
-    </section>
+      <section>
+        <h3>Appli backend Node</h3>
 
-    <section>
-      <p>Depuis VSCode</p>
-      <img style="margin: 0" src="img/img7.png" width="500px" alt="">
-    </section>
+      </section>
 
-    <section>
-      <h3>Fichier Launch.json</h3>
-      <p class="fragment">On peut le générer via Vs code</p>
-      <p class="fragment">Configurez pour le back-end ou le front-end</p>
-      <p class="fragment">Renseignez le port utilisé que l’on veut debugger</p>
-      <p class="fragment">
-        Pour pouvoir définir des points d'arrêt dans les fichiers recherchez <b style="color: red">debug.allowBreakpointsEverywhere</b>,
-        puis activez-le.
-      <pre class="fragment"><code>
+      <section>
+        <h3>VS Code : 2 moyens possibles</h3>
+        <p class="fragment">Créer un fichier launch.json</p>
+        <p class="fragment">Créer un Terminal en mode debug</p>
+      </section>
+
+      <section>
+        <p>Depuis VSCode</p>
+        <img style="margin: 0" src="img/img7.png" width="500px" alt="">
+      </section>
+
+      <section>
+        <h3>Fichier Launch.json</h3>
+        <p class="fragment">On peut le générer via Vs code</p>
+        <p class="fragment">Configurez pour le back-end ou le front-end</p>
+        <p class="fragment">Renseignez le port utilisé que l’on veut debugger</p>
+        <p class="fragment">
+          Pour pouvoir définir des points d'arrêt dans les fichiers recherchez <b style="color: red">debug.allowBreakpointsEverywhere</b>,
+          puis activez-le.
+        <pre class="fragment"><code>
 						{
 							"debug.allowBreakpointsEverywhere": true
 						}
 						</code></pre>
-      </p>
-    </section>
+        </p>
+      </section>
 
-    <section>
-      <h3>Exemple Launch.json (avec Chrome)</h3>
-      <pre><code data-trim data-noescape>
+      <section>
+        <h3>Exemple Launch.json (avec Chrome)</h3>
+        <pre><code data-trim data-noescape>
 						{
 							"version": "0.2.0",
 							"configurations": [
@@ -80,7 +106,53 @@
 						}
 
 							</code></pre>
+      </section>
+      <section>
+        <h3>Terminal en mode debug</h3>
+        <p class="fragment">Tout ce qui sera lancé (node, npm) aura un debugger rattaché</p>
+        <p class="fragment">Possibilité de le lancer depuis la racine du projet qui contient des sous projets) avec la
+          commande: npm run dev et ajoutez les breakpoints
+        </p>
+      </section>
+
+      <section>
+        <img style="margin: 0" src="img/img3.png" width="900px" alt="">
+      </section>
+
+      <section>
+        <p>Mode Auto Attach</p>
+        <p> à activer en <b style="color: red">Smart</b>, désactivable dans la barre d’outils en bas.
+          Tout ce qui sera lancé dans n’importe quel terminal (node, npm) aura un debugger rattaché.
+        </p>
+        <img style="margin: 0" src="img/img4.png" width="700px" alt="">
+      </section>
+      <section>
+        <h3>JetBrains</h3>
+        <div class="centered tenor-gif-embed" data-postid="21541617" data-share-method="host" data-aspect-ratio="0.859375"
+             data-width="50%"><a href="https://tenor.com/view/hack-khaby-lame-life-gif-21541617">Hack Khaby GIF</a>from
+          <a href="https://tenor.com/search/hack-gifs">Hack GIFs</a></div>
+      </section>
     </section>
+
+    <section>
+      <section>
+        <h3>Frameworks front</h3>
+      </section>
+
+      <section>
+        <h3>VSCode</h3>
+        <p>Créer un launch.json</p>
+      </section>
+
+      <section>
+        <h3>JetBrains</h3>
+        <div class="centered tenor-gif-embed" data-postid="21541617" data-share-method="host" data-aspect-ratio="0.859375"
+             data-width="50%"><a href="https://tenor.com/view/hack-khaby-lame-life-gif-21541617">Hack Khaby GIF</a>from
+          <a href="https://tenor.com/search/hack-gifs">Hack GIFs</a></div>
+      </section>
+    </section>
+
+
 
     <section>
       <h3>Features</h3>
@@ -95,46 +167,19 @@
 
     </section>
 
+
+
     <section>
-      <h3>Terminal en mode debug</h3>
-      <p class="fragment">Tout ce qui sera lancé (node, npm) aura un debugger rattaché</p>
-      <p class="fragment">Possibilité de le lancer depuis la racine du projet qui contient des sous projets) avec la
-        commande: npm run dev et ajoutez les breakpoints
-      </p>
+      <h2>Cypress</h2>
+      <p>Utiliser le Cypress Test Runner</p>
+      <pre><code>
+        npm i -g cypress
+        cypress open
+      </code></pre>
     </section>
 
     <section>
-      <img style="margin: 0" src="img/img3.png" width="900px" alt="">
-    </section>
-
-    <section>
-      <p>Mode Auto Attach</p>
-      <p> à activer en <b style="color: red">Smart</b>, désactivable dans la barre d’outils en bas.
-        Tout ce qui sera lancé dans n’importe quel terminal (node, npm) aura un debugger rattaché.
-      </p>
-      <img style="margin: 0" src="img/img4.png" width="700px" alt="">
-    </section>
-
-    <section>
-      <h3>JetBrains</h3>
-      <div class="centered tenor-gif-embed" data-postid="21541617" data-share-method="host" data-aspect-ratio="0.859375"
-           data-width="50%"><a href="https://tenor.com/view/hack-khaby-lame-life-gif-21541617">Hack Khaby GIF</a>from
-        <a href="https://tenor.com/search/hack-gifs">Hack GIFs</a></div>
-    </section>
-
-    <section>
-      <h3>Tests unitaires avec Jest</h3>
-      <p>Prérequis :</p>
-      <p class="fragment">Jest</p>
-      <p class="fragment">
-        Jest Runner (VSCode extension)
-        <img style="margin: 0" src="img/img1.png" width="40px" heigt="40px" alt="">
-      </p>
-    </section>
-
-    <section>
-      <p>Le plugin permet de lancer et debugger indépendamment chaque test.</p>
-      <img style="margin: 0" src="img/img2.png" width="900px" alt="">
+      <img class="centered" src="img/end.png" alt="conclusion" width="60%">
     </section>
 
     <section>
@@ -149,6 +194,7 @@
         </li>
       </ul>
     </section>
+
   </div>
 </div>
 
