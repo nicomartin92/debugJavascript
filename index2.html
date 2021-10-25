@@ -1,71 +1,91 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+  <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="css/custom.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>Debug JS</h2>
-					<p>(VScode <img style="margin: 0" src="img/img5.png" width="30px" heigt="30px" alt=""> vs JetBrain <img style="margin: 0" src="img/img6.png" width="30px" heigt="30px" alt="">)</p>
-				</section>
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <h2>🎵 Y a quelqu'un qui m'a dit, que tu ... console.log encore 🎵 </h2>
+    </section>
 
-				<section>
-					<h3>Introduction (lang)</h3>
-				</section>
+    <section>
+      <section>
+        <h3>Tests unitaires avec Jest</h3>
+      </section>
+      <section>
+        <h3>VS Code</h3>
+        <p>Prérequis :</p>
+        <p class="fragment">Jest</p>
+        <p class="fragment">
+          Jest Runner (VSCode extension)
+          <img style="margin: 0" src="img/img1.png" width="40px" heigt="40px" alt="">
+        </p>
+      </section>
 
-				<section>
-					<h3>Node / React</h3>
-				</section>
+      <section>
+        <p>Le plugin permet de lancer et debugger indépendamment chaque test.</p>
+        <img style="margin: 0" src="img/img2.png" width="900px" alt="">
+      </section>
 
-				<section>
-					<h3>VS Code</h3>
-				</section>
+      <section>
+        <h3>JetBrains</h3>
+        <div class="centered tenor-gif-embed" data-postid="21541617" data-share-method="host" data-aspect-ratio="0.859375"
+             data-width="50%"><a href="https://tenor.com/view/hack-khaby-lame-life-gif-21541617">Hack Khaby GIF</a>from
+          <a href="https://tenor.com/search/hack-gifs">Hack GIFs</a></div>
+      </section>
+    </section>
 
-				<section>
-					<h3>2 moyens possibles</h3>
-					<p class="fragment">Créer un fichier launch.json</p>
-					<p class="fragment">Créer un Terminal en mode debug</p>
-				</section>
 
-				<section>
-					<p>Depuis VSCode</p>
-					<img style="margin: 0" src="img/img7.png" width="500px" alt="">
-				</section>
+    <section>
+      <section>
+        <h3>Appli backend Node</h3>
 
-				<section>
-					<h3>Fichier Launch.json</h3>
-					<p class="fragment">On peut le générer via Vs code</p>
-					<p class="fragment">Configurer pour le back-end ou le front-end</p>
-					<p class="fragment">Renseignez le port utilisé que l’on veut debugger</p>
-					<p class="fragment">
-						Pour pouvoir définir des points d'arrêt dans les fichiers recherchez <b style="color: red">debug.allowBreakpointsEverywhere</b>, puis activez-le.
-						<pre class=fragment><code>
-						}
+      </section>
+
+      <section>
+        <h3>VS Code : 2 moyens possibles</h3>
+        <p class="fragment">Créer un fichier launch.json</p>
+        <p class="fragment">Créer un Terminal en mode debug</p>
+      </section>
+
+      <section>
+        <p>Depuis VSCode</p>
+        <img style="margin: 0" src="img/img7.png" width="500px" alt="">
+      </section>
+
+      <section>
+        <h3>Fichier Launch.json</h3>
+        <p class="fragment">On peut le générer via Vs code</p>
+        <p class="fragment">Configurez pour le back-end ou le front-end</p>
+        <p class="fragment">Renseignez le port utilisé que l’on veut debugger</p>
+        <p class="fragment">
+          Pour pouvoir définir des points d'arrêt dans les fichiers recherchez <b style="color: red">debug.allowBreakpointsEverywhere</b>,
+          puis activez-le.
+        <pre class="fragment"><code>
+						{
 							"debug.allowBreakpointsEverywhere": true
 						}
 						</code></pre>
-					</p>
-				</section>
+        </p>
+      </section>
 
-				<section>
-					<h3>Exemple Launch.json (avec Chrome)</h3>
-					<pre><code data-trim data-noescape>
+      <section>
+        <h3>Exemple Launch.json (avec Chrome)</h3>
+        <pre><code data-trim data-noescape>
 						{
-							// Use IntelliSense to learn about possible attributes.
-							// Hover to view descriptions of existing attributes.
-							// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 							"version": "0.2.0",
 							"configurations": [
 								{
@@ -86,86 +106,113 @@
 						}
 
 							</code></pre>
-				</section>
+      </section>
+      <section>
+        <h3>Terminal en mode debug</h3>
+        <p class="fragment">Tout ce qui sera lancé (node, npm) aura un debugger rattaché</p>
+        <p class="fragment">Possibilité de le lancer depuis la racine du projet qui contient des sous projets) avec la
+          commande: npm run dev et ajoutez les breakpoints
+        </p>
+      </section>
 
-				<section>
-					<h3>Features</h3>
-					<p style="text-align: left" class="fragment">Evaluer le code</p>
-					<p style="text-align: left" class="fragment">Breakpoint conditionnel (ne s’arrête que si la condition est satisfaite)</p>
-					<p style="text-align: left" class="fragment">LogPoint (comme un console.log, mais sans modifier le code)</p>
-					<p style="text-align: left" class="fragment">Watcher : surveiller des variables ou expressions</p>
-				</section>
+      <section>
+        <img style="margin: 0" src="img/img3.png" width="900px" alt="">
+      </section>
 
-				<section>
-					<h3>Terminal en mode debug</h3>
-					<p class="fragment">Tout ce qui sera lancé (node, npm) aura un debugger rattaché</p>
-					<p class="fragment">Possibilité de le lancer depuis la racine du projet qui contient des sous projets) avec la commande: npm run dev et ajoutez les breakpoints
-					</p>
-				</section>
+      <section>
+        <p>Mode Auto Attach</p>
+        <p> à activer en <b style="color: red">Smart</b>, désactivable dans la barre d’outils en bas.
+          Tout ce qui sera lancé dans n’importe quel terminal (node, npm) aura un debugger rattaché.
+        </p>
+        <img style="margin: 0" src="img/img4.png" width="700px" alt="">
+      </section>
+      <section>
+        <h3>JetBrains</h3>
+        <div class="centered tenor-gif-embed" data-postid="21541617" data-share-method="host" data-aspect-ratio="0.859375"
+             data-width="50%"><a href="https://tenor.com/view/hack-khaby-lame-life-gif-21541617">Hack Khaby GIF</a>from
+          <a href="https://tenor.com/search/hack-gifs">Hack GIFs</a></div>
+      </section>
+    </section>
 
-				<section>
-					<img style="margin: 0" src="img/img3.png" width="900px" alt="">
-				</section>
+    <section>
+      <section>
+        <h3>Frameworks front</h3>
+      </section>
 
-				<section>
-					<p>Mode Auto Attach</p>
-					<p>	à activer en <b style="color: red">Smart</b>, désactivable dans la barre d’outils en bas.
-						Tout ce qui sera lancé dans n’importe quel terminal (node, npm) aura un debugger rattaché.
-						</p>
-					<img style="margin: 0" src="img/img4.png" width="700px" alt="">
-				</section>
+      <section>
+        <h3>VSCode</h3>
+        <p>Créer un launch.json</p>
+      </section>
 
-				<section>
-					<h3>JetBrain (lang)</h3>
-				</section>
+      <section>
+        <h3>JetBrains</h3>
+        <div class="centered tenor-gif-embed" data-postid="21541617" data-share-method="host" data-aspect-ratio="0.859375"
+             data-width="50%"><a href="https://tenor.com/view/hack-khaby-lame-life-gif-21541617">Hack Khaby GIF</a>from
+          <a href="https://tenor.com/search/hack-gifs">Hack GIFs</a></div>
+      </section>
+    </section>
 
-				<section>
-					<h3>Tests unitaires avec Jest</h3>
-					<p>Prérequis :</p>
-					<p class="fragment">Jest</p>
-					<p class="fragment">
-						Jest Runner (vs code extension)
-						<img style="margin: 0" src="img/img1.png" width="40px" heigt="40px" alt="">
-					</p>
-				</section>
 
-				<section>
-					<p>Le plugin permet de lancer et debugger indépendamment chaque test.</p>
-					<img style="margin: 0" src="img/img2.png" width="900px" alt="">
-				</section>
 
-				<section>
-					<h3>JetBrain (lang)</h3>
-				</section>
+    <section>
+      <h3>Features</h3>
+      <ul>
+        <li class="fragment">Evaluer le code</li>
+        <li class="fragment">Breakpoint conditionnel (ne s’arrête que si la condition est
+          satisfaite)
+        </li>
+        <li class="fragment">LogPoint (comme un console.log, mais sans modifier le code)</li>
+        <li class="fragment">Watcher : surveiller des variables ou expressions</li>
+      </ul>
 
-				<section>
-					<h3>Sources</h3>
-					<ul>
-						<li>
-							<a href="https://code.visualstudio.com/docs/editor/debugging ">https://code.visualstudio.com/docs/editor/debugging </a>
-						</li>
-						<li>
-							<a href="https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner">Jest Runner (VSCode)</a>
-						</li>
-					</ul>
-				</section>
-			</div>
-		</div>
+    </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+
+    <section>
+      <h2>Cypress</h2>
+      <p>Utiliser le Cypress Test Runner</p>
+      <pre><code>
+        npm i -g cypress
+        cypress open
+      </code></pre>
+    </section>
+
+    <section>
+      <img class="centered" src="img/end.png" alt="conclusion" width="60%">
+    </section>
+
+    <section>
+      <h3>Sources</h3>
+      <ul>
+        <li>
+          <a href="https://code.visualstudio.com/docs/editor/debugging ">https://code.visualstudio.com/docs/editor/debugging </a>
+        </li>
+        <li>
+          <a href="https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner">Jest Runner
+            (VSCode)</a>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script async src="https://tenor.com/embed.js"></script>
+<script>
+  // More info about initialization & config:
+  // - https://revealjs.com/initialization/
+  // - https://revealjs.com/config/
+  Reveal.initialize({
+    hash: true,
+
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+  });
+</script>
+</body>
 </html>
