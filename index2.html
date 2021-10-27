@@ -56,57 +56,10 @@
       </section>
 
       <section>
-        <h3>VS Code : 2 moyens possibles</h3>
-        <p class="fragment">Créer un fichier launch.json</p>
+        <h3>VS Code </h3>
         <p class="fragment">Créer un Terminal en mode debug</p>
       </section>
 
-      <section>
-        <p>Depuis VSCode</p>
-        <img style="margin: 0" src="img/img7.png" width="500px" alt="">
-      </section>
-
-      <section>
-        <h3>Fichier Launch.json</h3>
-        <p class="fragment">On peut le générer via Vs code</p>
-        <p class="fragment">Configurez pour le back-end ou le front-end</p>
-        <p class="fragment">Renseignez le port utilisé que l’on veut debugger</p>
-        <p class="fragment">
-          Pour pouvoir définir des points d'arrêt dans les fichiers recherchez <b style="color: red">debug.allowBreakpointsEverywhere</b>,
-          puis activez-le.
-        <pre class="fragment"><code>
-						{
-							"debug.allowBreakpointsEverywhere": true
-						}
-						</code></pre>
-        </p>
-      </section>
-
-      <section>
-        <h3>Exemple Launch.json (avec Chrome)</h3>
-        <pre><code data-trim data-noescape>
-						{
-							"version": "0.2.0",
-							"configurations": [
-								{
-									"type": "chrome",
-									"request": "launch",
-									"name": "Launch Chrome back localhost",
-									"url": "http://localhost:8083/rest/hello-world/",
-									"webRoot": "${workspaceFolder}/api/src/**"
-								},
-								{
-									"type": "chrome",
-									"request": "launch",
-									"name": "Launch Chrome front localhost",
-									"url": "http://localhost:3000",
-									"webRoot": "${workspaceFolder}/client/src/**"
-								}
-							]
-						}
-
-							</code></pre>
-      </section>
       <section>
         <h3>Terminal en mode debug</h3>
         <p class="fragment">Tout ce qui sera lancé (node, npm) aura un debugger rattaché</p>
@@ -142,6 +95,46 @@
       <section>
         <h3>VSCode</h3>
         <p>Créer un launch.json</p>
+      </section>
+
+      <section>
+        <p>Depuis VSCode</p>
+        <img style="margin: 0" src="img/img7.png" width="500px" alt="">
+      </section>
+
+      <section>
+        <h3>Fichier Launch.json</h3>
+        <p class="fragment">On peut le générer via Vs code</p>
+        <p class="fragment">Configurez le front-end</p>
+        <p class="fragment">Renseignez le port utilisé que l’on veut debugger</p>
+        <p class="fragment">
+          Pour pouvoir définir des points d'arrêt dans les fichiers recherchez <b style="color: red">debug.allowBreakpointsEverywhere</b>,
+          puis activez-le.
+        <pre class="fragment"><code>
+						{
+							"debug.allowBreakpointsEverywhere": true
+						}
+						</code></pre>
+        </p>
+      </section>
+
+      <section>
+        <h3>Exemple Launch.json (avec Chrome)</h3>
+        <pre><code data-trim data-noescape>
+						{
+							"version": "0.2.0",
+							"configurations": [
+								{
+									"type": "chrome",
+									"request": "launch",
+									"name": "Launch Chrome front localhost",
+									"url": "http://localhost:3000",
+									"webRoot": "${workspaceFolder}/client/src/**"
+								}
+							]
+						}
+
+							</code></pre>
       </section>
 
       <section>
