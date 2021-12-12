@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="dist/theme/solarized.css">
   <link rel="stylesheet" href="css/custom.css">
 
   <!-- Theme used for syntax highlighted code -->
@@ -32,6 +32,7 @@
         <p class="fragment">
           Jest Runner (VSCode extension)
           <img style="margin: 0" src="img/img1.png" width="40px" heigt="40px" alt="">
+          <p class="fragment">vscode-jest-runner se concentre sur l'exécution ou le débogage d'un test ou d'une suite de tests spécifique</p>
         </p>
       </section>
 
@@ -56,20 +57,58 @@
       </section>
 
       <section>
-        <h3>VS Code </h3>
+        <h3>VS Code : 2 moyens possibles</h3>
         <p class="fragment">Créer un Terminal en mode debug</p>
+        <p class="fragment">Créer un launch.json</p>
       </section>
 
       <section>
         <h3>Terminal en mode debug</h3>
         <p class="fragment">Tout ce qui sera lancé (node, npm) aura un debugger rattaché</p>
-        <p class="fragment">Possibilité de le lancer depuis la racine du projet qui contient des sous projets) avec la
-          commande: npm run dev et ajoutez les breakpoints
-        </p>
       </section>
 
       <section>
         <img style="margin: 0" src="img/img3.png" width="900px" alt="">
+      </section>
+
+      <section>
+        <h3>Avec un fichier launch.json (node)</h3>
+        <img style="margin: 0" src="img/img7.png" width="500px" alt="">
+      </section>
+
+      <section>
+        <pre><code data-trim data-noescape>
+          {
+            "version": "0.2.0",
+            "configurations": [
+              {
+                "type": "node",
+                "request": "launch",
+                "name": "Launch back-end tsed",
+                "program": "${workspaceFolder}/api/src/**",
+                "preLaunchTask": "npm: start - api",
+              }
+            ]
+          }
+            </code></pre>
+      </section>
+
+      <section>
+        <h3>Créer une task</h3>
+        <pre><code data-trim data-noescape>
+          {
+            "version": "2.0.0",
+            "tasks": [
+              {
+                "type": "npm",
+                "script": "start",
+                "path": "api/",
+                "label": "npm: start - api",
+                "detail": "tsnd --inspect --ignore-watch node_modules --respawn --transpile-only -r tsconfig-paths/register src/index.ts"
+              }
+            ]
+          }
+            </code></pre>
       </section>
 
       <section>
@@ -98,11 +137,6 @@
       </section>
 
       <section>
-        <p>Depuis VSCode</p>
-        <img style="margin: 0" src="img/img7.png" width="500px" alt="">
-      </section>
-
-      <section>
         <h3>Fichier Launch.json</h3>
         <p class="fragment">On peut le générer via Vs code</p>
         <p class="fragment">Configurez le front-end</p>
@@ -127,7 +161,7 @@
 								{
 									"type": "chrome",
 									"request": "launch",
-									"name": "Launch Chrome front localhost",
+									"name": "Launch Chrome",
 									"url": "http://localhost:3000",
 									"webRoot": "${workspaceFolder}/client/src/**"
 								}
